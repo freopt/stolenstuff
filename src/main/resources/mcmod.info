@@ -1,0 +1,15 @@
+[
+{
+  "modid": "stolenstuff",
+  "name": "StolenStuff",
+  "description": "Stuff stolen from mods under the MIT License",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "updateUrl": "",
+  "authorList": ["Lumien231","noobanidus"],
+  "credits": "freopt",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

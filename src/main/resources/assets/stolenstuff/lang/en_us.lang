@@ -1,0 +1,7 @@
+itemGroup.tiab.name=Time in a bottle
+
+item.timeInABottle.name=Time in a bottle
+
+tooltip.timeInABottle=%d H | %d M | %d S
+
+tile.defiled_ground.name=Defiled Ground
