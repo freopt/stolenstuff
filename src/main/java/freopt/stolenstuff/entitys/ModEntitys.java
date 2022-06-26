@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class ModEntitys
 {
-	public static void init()
+	public static void load()
 	{
 		registerEntity(EntityTimeAccelerator.class, "timeAccelerator", 11, StolenStuff.INSTANCE, 64, 10, false);
 	}

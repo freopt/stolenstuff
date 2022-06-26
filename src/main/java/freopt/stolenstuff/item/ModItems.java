@@ -1,7 +1,9 @@
 package freopt.stolenstuff.item;
 
+import freopt.stolenstuff.StolenStuff;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -19,7 +21,12 @@ public class ModItems {
 
 		for (Item item: ITEMS) {
 			ForgeRegistries.ITEMS.register(item);
-			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+			if (item.getRegistryName().equals(new ResourceLocation(StolenStuff.MODID,"feral_flare_lantern"))) {
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "facing=down"));
+			}
+			else {
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+			}
 		}
 	}
 }

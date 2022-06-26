@@ -1,0 +1,21 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "transform": "forge:default-block",
+        "textures": {
+            "tex": "stolenstuff:blocks/feral_flare_lantern"
+        },
+        "model": "stolenstuff:feral_flare_lantern"
+    },
+    "variants": {
+        "facing":
+        {
+            "south": { "submodel": { "pin": { "model": "stolenstuff:feral_flare_lantern_stand", "x": 90 } } },
+            "north": { "submodel": { "pin": { "model": "stolenstuff:feral_flare_lantern_stand", "x": 270 } } },
+            "west": { "submodel": { "pin": { "model": "stolenstuff:feral_flare_lantern_stand", "x": 90, "y": 90 } } },
+            "east": { "submodel": { "pin": { "model": "stolenstuff:feral_flare_lantern_stand", "x": 90, "y": 270 } } },
+            "up": { "submodel": { "pin": { "model": "stolenstuff:feral_flare_lantern_stand", "x": 180 } } },
+            "down": { "submodel": { "pin": { "model": "stolenstuff:feral_flare_lantern_stand" } } }
+        }
+    }
+}
