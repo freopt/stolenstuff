@@ -16,13 +16,12 @@ public class CommonProxy
 		ModBlocks.load(event);
 		ModItems.load(event);
 
-
 		ModEntitys.init();
 
 		MinecraftForge.EVENT_BUS.register(new RTEventHandler());
 	}
 
 	public static void postInit(FMLPostInitializationEvent event) {
-		ClientProxy.registerRenderers();
+
 	}
 }

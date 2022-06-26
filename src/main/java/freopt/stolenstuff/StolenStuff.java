@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -26,20 +25,18 @@ public class StolenStuff
 	@SidedProxy(clientSide = "freopt.stolenstuff.proxy.ClientProxy", serverSide = "freopt.stolenstuff.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
-
 	public static final Logger LOGGER = LogManager.getLogger("stolenstuff");
-
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event)
 	{
-		CommonProxy.preInit(event);
+		proxy.preInit(event);
 	}
 
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event)
 	{
-		CommonProxy.postInit(event);
+		proxy.postInit(event);
 	}
 
 	public static final CreativeTabs creativeTab = new CreativeTabs("stolenstuff") {
