@@ -13,8 +13,7 @@ public class ModItems {
 
 	public static final List<Item> ITEMS = new ArrayList<>();
 
-
-	public static void load(FMLPreInitializationEvent event)
+	public static void load()
 	{
 		ITEMS.add(new ItemTimeInABottle());
 

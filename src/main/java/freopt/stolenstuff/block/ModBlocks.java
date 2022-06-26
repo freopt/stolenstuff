@@ -12,7 +12,7 @@ import java.util.List;
 public class ModBlocks {
 
     private static final List<Block> BLOCKS = new ArrayList<>();
-    public static void load(FMLPreInitializationEvent event) {
+    public static void load() {
         BLOCKS.add(new BlockDefiledGround());
 
         for (Block block: BLOCKS) {

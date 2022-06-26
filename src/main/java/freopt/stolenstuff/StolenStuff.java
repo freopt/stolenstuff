@@ -28,15 +28,15 @@ public class StolenStuff
 	public static final Logger LOGGER = LogManager.getLogger("stolenstuff");
 
 	@EventHandler
-	public static void preInit(FMLPreInitializationEvent event)
+	public void preInit(FMLPreInitializationEvent event)
 	{
-		proxy.preInit(event);
+		proxy.preInit();
 	}
 
 	@EventHandler
-	public static void postInit(FMLPostInitializationEvent event)
+	public void postInit(FMLPostInitializationEvent event)
 	{
-		proxy.postInit(event);
+		proxy.postInit();
 	}
 
 	public static final CreativeTabs creativeTab = new CreativeTabs("stolenstuff") {
