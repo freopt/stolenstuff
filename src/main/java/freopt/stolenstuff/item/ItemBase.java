@@ -10,6 +10,7 @@ public class ItemBase extends Item
 	public ItemBase(String name)
 	{
 		this.setRegistryName(new ResourceLocation("stolenstuff",name));
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(StolenStuff.creativeTab);
 	}
 
