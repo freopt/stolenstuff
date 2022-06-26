@@ -5,13 +5,13 @@ import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Config(modid = StolenStuff.MOD_ID)
+@Config(modid = StolenStuff.MODID)
 @SuppressWarnings("unused")
 public class StolenStuffConfig {
     @SubscribeEvent
     public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equals(StolenStuff.MOD_ID)) {
-            ConfigManager.sync(StolenStuff.MOD_ID, Config.Type.INSTANCE);
+        if (event.getModID().equals(StolenStuff.MODID)) {
+            ConfigManager.sync(StolenStuff.MODID, Config.Type.INSTANCE);
         }
     }
 

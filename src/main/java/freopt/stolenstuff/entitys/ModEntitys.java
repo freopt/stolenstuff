@@ -9,7 +9,7 @@ public class ModEntitys
 {
 	public static void init()
 	{
-		registerEntity(EntityTimeAccelerator.class, "timeAccelerator", 11, StolenStuff.instance, 64, 10, false);
+		registerEntity(EntityTimeAccelerator.class, "timeAccelerator", 11, StolenStuff.INSTANCE, 64, 10, false);
 	}
 
 	private static void registerEntity(Class<? extends Entity> entityClass, String entityName, int id, Object mod, int trackingRange, int updateFrequency, boolean sendsVelocityUpdates)

@@ -1,13 +1,12 @@
 package freopt.stolenstuff;
 
-import freopt.stolenstuff.block.ModBlocks;
-import freopt.stolenstuff.entitys.ModEntitys;
+import freopt.stolenstuff.proxy.CommonProxy;
+import freopt.stolenstuff.util.Antipain;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import freopt.stolenstuff.handler.RTEventHandler;
-import freopt.stolenstuff.item.ModItems;
-import freopt.stolenstuff.lib.RTCreativeTab;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -15,46 +14,38 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-
-
-@Mod(modid = StolenStuff.MOD_ID, name = StolenStuff.MOD_NAME, version = StolenStuff.MOD_VERSION, acceptedMinecraftVersions = "[1.12,1.13)")
+@Mod(modid = StolenStuff.MODID, name = StolenStuff.NAME, version = StolenStuff.VERSION, acceptedMinecraftVersions = "[1.12,1.13)")
 public class StolenStuff
 {
-	public static final String MOD_ID = "stolenstuff";
-	public static final String MOD_NAME = "StolenStuff";
-	public static final String MOD_VERSION = "@VERSION@";
+	public static final String MODID = "stolenstuff";
+	public static final String NAME = "StolenStuff";
+	public static final String VERSION = "@VERSION@";
 
-	@Instance(MOD_ID)
-	public static StolenStuff instance;
+	@Mod.Instance public static StolenStuff INSTANCE;
 
-	@SidedProxy(clientSide = "freopt.stolenstuff.client.ClientProxy", serverSide = "freopt.stolenstuff.CommonProxy")
+	@SidedProxy(clientSide = "freopt.stolenstuff.proxy.ClientProxy", serverSide = "freopt.stolenstuff.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
-	public RTCreativeTab creativeTab;
 
-	public Logger logger;
+	public static final Logger LOGGER = LogManager.getLogger("stolenstuff");
 
 
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event)
+	public static void preInit(FMLPreInitializationEvent event)
 	{
-		creativeTab = new RTCreativeTab();
-		logger = event.getModLog();
-
-
-		ModItems.load(event);
-		ModBlocks.load(event);
-
-		ModEntitys.init();
-		proxy.registerModels();
-
-		RTEventHandler eventHandler = new RTEventHandler();
-		MinecraftForge.EVENT_BUS.register(eventHandler);
+		CommonProxy.preInit(event);
 	}
 
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event)
+	public static void postInit(FMLPostInitializationEvent event)
 	{
-		proxy.registerRenderers();
+		CommonProxy.postInit(event);
 	}
+
+	public static final CreativeTabs creativeTab = new CreativeTabs("stolenstuff") {
+		@Override
+		public ItemStack getTabIconItem() {
+			return Antipain.getItemStack(MODID,"timeInABottle",0);
+		}
+	};
 }

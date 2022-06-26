@@ -15,12 +15,9 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class BlockDefiledGround extends Block {
+public class BlockDefiledGround extends BlockBase {
     public BlockDefiledGround() {
-        super(Material.GROUND);
-        setUnlocalizedName("defiled_ground");
-        setRegistryName(StolenStuff.MOD_ID, "defiled_ground");
-        setCreativeTab(StolenStuff.instance.creativeTab);
+        super("defiled_ground",Material.GROUND);
     }
 
     @Override
