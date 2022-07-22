@@ -10,6 +10,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumActionResult;
@@ -27,8 +28,7 @@ public class ItemTimeInABottle extends ItemBase
 
 	public ItemTimeInABottle()
 	{
-		super("timeInABottle");
-
+		super("timeinabottle");
 		this.setMaxStackSize(1);
 	}
 

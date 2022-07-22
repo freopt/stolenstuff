@@ -1,9 +1,6 @@
 package freopt.stolenstuff.block;
 
-import freopt.stolenstuff.item.ModItems;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import java.util.ArrayList;

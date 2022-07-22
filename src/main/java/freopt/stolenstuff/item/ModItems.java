@@ -2,10 +2,12 @@ package freopt.stolenstuff.item;
 
 import freopt.stolenstuff.StolenStuff;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import java.util.ArrayList;
@@ -15,11 +17,25 @@ public class ModItems {
 
 	public static final List<Item> ITEMS = new ArrayList<>();
 
+	public static Item TIAB = new ItemTimeInABottle();
+
+
 	public static void load()
 	{
-		ITEMS.add(new ItemTimeInABottle());
+		ITEMS.add(TIAB);
+		ITEMS.add(new SSPickaxe(ToolMaterials.OSMIUM));
+		//ITEMS.add(new SSAxe(ToolMaterials.OSMIUM));
+		ITEMS.add(new SSHoe(ToolMaterials.OSMIUM));
+		ITEMS.add(new SSShovel(ToolMaterials.OSMIUM));
+		ITEMS.add(new SSSword(ToolMaterials.OSMIUM));
+		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,0, EntityEquipmentSlot.HEAD));
+		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,1, EntityEquipmentSlot.CHEST));
+		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,2, EntityEquipmentSlot.LEGS));
+		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,3, EntityEquipmentSlot.FEET));
+
 
 		for (Item item: ITEMS) {
+			item.setCreativeTab(StolenStuff.creativeTab);
 			ForgeRegistries.ITEMS.register(item);
 			if (item.getRegistryName().equals(new ResourceLocation(StolenStuff.MODID,"feral_flare_lantern"))) {
 				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "facing=down"));
