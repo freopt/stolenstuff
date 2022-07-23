@@ -4,8 +4,6 @@ import freopt.stolenstuff.StolenStuff;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -24,15 +22,14 @@ public class ModItems {
 	{
 		ITEMS.add(TIAB);
 		ITEMS.add(new SSPickaxe(ToolMaterials.OSMIUM));
-		//ITEMS.add(new SSAxe(ToolMaterials.OSMIUM));
+		ITEMS.add(new SSAxe(ToolMaterials.OSMIUM,7F,5F));
 		ITEMS.add(new SSHoe(ToolMaterials.OSMIUM));
 		ITEMS.add(new SSShovel(ToolMaterials.OSMIUM));
 		ITEMS.add(new SSSword(ToolMaterials.OSMIUM));
-		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,0, EntityEquipmentSlot.HEAD));
+		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,1, EntityEquipmentSlot.HEAD));
 		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,1, EntityEquipmentSlot.CHEST));
 		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,2, EntityEquipmentSlot.LEGS));
-		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,3, EntityEquipmentSlot.FEET));
-
+		ITEMS.add(new SSArmor(ArmorMaterials.OSMIUM,1, EntityEquipmentSlot.FEET));
 
 		for (Item item: ITEMS) {
 			item.setCreativeTab(StolenStuff.creativeTab);

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " OO",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "O": {
+      "type": "forge:ore_dict",
+      "ore": "ingotOsmium"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "stolenstuff:osmium_hoe"
+  }
+}

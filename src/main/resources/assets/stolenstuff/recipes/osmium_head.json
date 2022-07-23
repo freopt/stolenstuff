@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "O O",
+    "   "
+  ],
+  "key": {
+    "O": {
+      "type": "forge:ore_dict",
+      "ore": "ingotOsmium"
+    }
+  },
+  "result": {
+    "item": "stolenstuff:osmium_head"
+  }
+}

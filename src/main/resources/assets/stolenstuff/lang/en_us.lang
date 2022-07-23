@@ -7,3 +7,13 @@ tooltip.timeInABottle=%d H | %d M | %d S
 tile.defiled_ground.name=Defiled Ground
 
 tile.feral_flare_lantern.name=Feral Flare Lantern
+
+item.osmium_hoe.name=Osmium Hoe
+item.osmium_pickaxe.name=Osmium Pickaxe
+item.osmium_axe.name=Osmium Axe
+item.osmium_shovel.name=Osmium Shovel
+item.osmium_sword.name=Osmium Sword
+item.osmium_head.name=Osmium Helmet
+item.osmium_chest.name=Osmium Chestplate
+item.osmium_legs.name=Osmium Leggings
+item.osmium_feet.name=Osmium Boots
