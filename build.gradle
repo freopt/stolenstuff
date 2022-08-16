@@ -29,14 +29,11 @@ minecraft {
     runDir = "run"
 
     mappings = "snapshot_20171220"
-    
-    replaceIn "lib/Reference.java"
-    replace "@VERSION@",project.version
-	
+
     useDepAts = true
 }
 
-archivesBaseName = "StolenStuff" + minecraft.version
+archivesBaseName = "StolenStuff"
 
 dependencies {
 }

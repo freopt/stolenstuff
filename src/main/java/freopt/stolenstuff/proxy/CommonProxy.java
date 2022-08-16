@@ -6,6 +6,7 @@ import freopt.stolenstuff.handler.RTEventHandler;
 import freopt.stolenstuff.item.ArmorMaterials;
 import freopt.stolenstuff.item.ModItems;
 import freopt.stolenstuff.item.ToolMaterials;
+import freopt.stolenstuff.random.OptimizeStuff;
 import freopt.stolenstuff.tileentities.ModTileEntities;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -19,6 +20,10 @@ public class CommonProxy
 		ModItems.load();
 		ModTileEntities.load();
 		ModEntitys.load();
+	}
+
+	public void init() {
+		OptimizeStuff.doOptimizeStuff();
 	}
 
 	public void postInit() {

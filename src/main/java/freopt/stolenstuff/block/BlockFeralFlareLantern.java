@@ -1,17 +1,14 @@
 package freopt.stolenstuff.block;
 
 import freopt.stolenstuff.StolenStuff;
-import freopt.stolenstuff.client.render.gui.ModGuiHandler;
 import freopt.stolenstuff.tileentities.TileEntityFeralFlareLantern;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -19,7 +16,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.ModelLoader;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -84,7 +80,6 @@ public class BlockFeralFlareLantern extends BlockBase {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        playerIn.openGui(StolenStuff.INSTANCE, ModGuiHandler.GuiType.FERAL_LANTERN.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
         return true;
     }
 

@@ -3,7 +3,6 @@ package freopt.stolenstuff.item;
 import freopt.stolenstuff.StolenStuff;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
-import net.minecraftforge.client.model.ModelLoader;
 
 public class SSArmor extends ItemArmor {
     public SSArmor(ArmorMaterial material, int renderIndex, EntityEquipmentSlot slot) {
@@ -11,6 +10,5 @@ public class SSArmor extends ItemArmor {
         String name = material.name() + "_" + slot.getName();
         this.setRegistryName(StolenStuff.MODID,name);
         this.setUnlocalizedName(name);
-
     }
 }

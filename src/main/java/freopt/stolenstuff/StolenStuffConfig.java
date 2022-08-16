@@ -1,21 +1,14 @@
 package freopt.stolenstuff;
 
 import net.minecraftforge.common.config.Config;
-import net.minecraftforge.common.config.ConfigManager;
-import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Config(modid = StolenStuff.MODID)
-@SuppressWarnings("unused")
 public class StolenStuffConfig {
-    @SubscribeEvent
-    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equals(StolenStuff.MODID)) {
-            ConfigManager.sync(StolenStuff.MODID, Config.Type.INSTANCE);
-        }
-    }
 
-    @Config.Comment("Settings related to Defiled Ground")
+    @Config.Comment("How many ticks have to pass for a Time in a Bottle to gain 1 second (20 = 1 Second)")
+    @Config.Name("TimeInABottlePerSecond")
+    public static int TIME_IN_A_BOTTLE_SECOND = 20;
+
     @Config.Name("Defiled Ground")
     public static DefiledGround DefiledGround = new DefiledGround();
 
@@ -73,18 +66,19 @@ public class StolenStuffConfig {
 
     @Config.Name("Feral Flare Lantern")
     public static FeralFlareLantern FeralFlareLantern = new FeralFlareLantern();
+
     public static class FeralFlareLantern {
         @Config.RangeInt(min = 0)
         @Config.Comment("The radius in which the feral flare should try to place lights")
-        public static int feralFlareRadius = 16;
+        public int feralFlareRadius = 16;
 
         @Config.RangeInt(min = 1)
         @Config.Comment("Controls how often the flare should try to place lights. 1 means every tick, 10 every 10th tick, etc")
-        public static int feralFlareTickRate = 5;
+        public int feralFlareTickRate = 5;
 
         @Config.RangeInt(min = 1, max = 15)
         @Config.Comment("The target minimum light level to place lights for")
-        public static int feralFlareMinLightLevel = 10;
+        public int feralFlareMinLightLevel = 10;
 
         @Config.RangeInt(min = 0)
         @Config.Comment({
@@ -92,15 +86,10 @@ public class StolenStuffConfig {
                 "Warning: Setting this value too high in conjunction with the feralFlareMinLightLevel and Radius can lead to world corruption!",
                 "(Badly compressed packet error)"
         })
-        public static int FeralFlareLanternLightCountHardcap = 255;
+        public int FeralFlareLanternLightCountHardcap = 255;
 
         @Config.Comment("If false, lights decay slowly after the lantern has been removed. If true, the lights will be removed instantly")
-        public static boolean feralFlareLightDecayInstantly = false;
+        public boolean feralFlareLightDecayInstantly = false;
     }
-
-    @Config.Comment("How many ticks have to pass for a Time in a Bottle to gain 1 second (20 = 1 Second)")
-    @Config.Name("TimeInABottlePerSecond")
-    public static int TIME_IN_A_BOTTLE_SECOND = 20;
-
 }
 
