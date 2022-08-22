@@ -49,7 +49,7 @@ public class BlockFeralFlareLantern extends BlockBase {
     @Override @SuppressWarnings("deprecation")
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.getFront(meta & 0b0111));
+        return this.getDefaultState().withProperty(FACING, EnumFacing.byIndex(meta & 0b0111));
     }
 
     @Override

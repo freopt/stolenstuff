@@ -8,7 +8,7 @@ public class SSHoe extends ItemHoe{
         super(material);
         String name = material.name() + "_hoe";
         this.setRegistryName(StolenStuff.MODID,name);
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
     }
 }
 

@@ -11,7 +11,7 @@ public class BlockBase extends Block {
     public BlockBase(String name, Material material) {
         super(material);
         this.setRegistryName(new ResourceLocation(StolenStuff.MODID,name));
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
         this.setCreativeTab(StolenStuff.creativeTab);
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
     }

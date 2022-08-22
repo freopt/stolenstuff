@@ -1,6 +1,6 @@
 itemGroup.stolenstuff=StolenStuff
 
-item.timeInABottle.name=Time In A Bottle
+item.timeinabottle.name=Time In A Bottle
 
 tooltip.timeInABottle=%d H | %d M | %d S
 

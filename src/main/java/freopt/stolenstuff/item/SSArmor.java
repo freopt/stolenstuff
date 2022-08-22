@@ -9,6 +9,6 @@ public class SSArmor extends ItemArmor {
         super(material,renderIndex,slot);
         String name = material.name() + "_" + slot.getName();
         this.setRegistryName(StolenStuff.MODID,name);
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
     }
 }

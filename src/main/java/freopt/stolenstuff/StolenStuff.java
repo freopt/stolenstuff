@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,18 +38,18 @@ public class StolenStuff
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		proxy.preInit();
+		proxy.preInit(event);
 	}
 
 	@EventHandler
-	public void init(FMLPostInitializationEvent event) {
-		proxy.init();
+	public void init(FMLInitializationEvent event) {
+		proxy.init(event);
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		proxy.postInit();
+		proxy.postInit(event);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -61,7 +62,7 @@ public class StolenStuff
 
 	public static final CreativeTabs creativeTab = new CreativeTabs("stolenstuff") {
 		@Override
-		public ItemStack getTabIconItem() {
+		public ItemStack createIcon() {
 			return Antipain.getItemStack(MODID,"timeInABottle",0);
 		}
 	};

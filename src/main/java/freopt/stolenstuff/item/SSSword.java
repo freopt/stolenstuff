@@ -8,6 +8,6 @@ public class SSSword extends ItemSword {
         super(material);
         String name = material.name() + "_sword";
         this.setRegistryName(StolenStuff.MODID,name);
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
     }
 }

@@ -8,6 +8,6 @@ public class SSAxe extends ItemAxe {
         super(material, damage, speed);
         String name = material.name() + "_axe";
         this.setRegistryName(StolenStuff.MODID,name);
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
     }
 }

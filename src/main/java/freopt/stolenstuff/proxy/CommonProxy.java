@@ -9,10 +9,13 @@ import freopt.stolenstuff.item.ToolMaterials;
 import freopt.stolenstuff.random.OptimizeStuff;
 import freopt.stolenstuff.tileentities.ModTileEntities;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class CommonProxy
 {
-	public void preInit()
+	public void preInit(FMLPreInitializationEvent event)
 	{
 		ToolMaterials.registerMaterials();
 		ArmorMaterials.registerMaterials();
@@ -22,11 +25,11 @@ public class CommonProxy
 		ModEntitys.load();
 	}
 
-	public void init() {
+	public void init(FMLInitializationEvent event) {
 		OptimizeStuff.doOptimizeStuff();
 	}
 
-	public void postInit() {
+	public void postInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new RTEventHandler());
 	}
 }

@@ -8,7 +8,7 @@ public class ItemBase extends Item {
 
     public ItemBase(String name) {
         this.setRegistryName(new ResourceLocation(StolenStuff.MODID,name));
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
     }
 
 }

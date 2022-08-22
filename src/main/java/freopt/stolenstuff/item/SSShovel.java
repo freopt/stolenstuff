@@ -8,7 +8,7 @@ public class SSShovel extends ItemSpade {
         super(material);
         String name = material.name() + "_shovel";
         this.setRegistryName(StolenStuff.MODID,name);
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
     }
 }
 
