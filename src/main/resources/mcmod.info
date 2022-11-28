@@ -6,8 +6,8 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "updateUrl": "",
-  "authorList": ["Lumien231","noobanidus","xalcon"],
-  "credits": "freopt",
+  "authorList": ["freopt"],
+  "credits": "Lumien231,noobanidus,xalcon,CyanideX",
   "logoFile": "logo.png",
   "screenshots": [],
   "dependencies": []

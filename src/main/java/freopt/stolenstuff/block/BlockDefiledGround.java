@@ -1,9 +1,7 @@
 package freopt.stolenstuff.block;
 
-import freopt.stolenstuff.tileentities.TileEntityDefiledGround;
-import freopt.stolenstuff.StolenStuff;
 import freopt.stolenstuff.StolenStuffConfig;
-import net.minecraft.block.Block;
+import freopt.stolenstuff.tileentities.TileEntityDefiledGround;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -23,7 +21,6 @@ public class BlockDefiledGround extends BlockBase {
     @Override
     public boolean hasTileEntity(IBlockState state) {
         return StolenStuffConfig.DefiledGround.defiledGroundEnabled;
-
     }
 
     @Nullable
@@ -50,4 +47,3 @@ public class BlockDefiledGround extends BlockBase {
         }
     }
 }
-

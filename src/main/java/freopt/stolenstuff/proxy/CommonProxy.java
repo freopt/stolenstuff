@@ -6,7 +6,6 @@ import freopt.stolenstuff.handler.RTEventHandler;
 import freopt.stolenstuff.item.ArmorMaterials;
 import freopt.stolenstuff.item.ModItems;
 import freopt.stolenstuff.item.ToolMaterials;
-import freopt.stolenstuff.random.OptimizeStuff;
 import freopt.stolenstuff.tileentities.ModTileEntities;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,10 +25,12 @@ public class CommonProxy
 	}
 
 	public void init(FMLInitializationEvent event) {
-		OptimizeStuff.doOptimizeStuff();
+
 	}
 
 	public void postInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new RTEventHandler());
+		ToolMaterials.setRepairItem();
+		ArmorMaterials.setRepairItem();
 	}
 }

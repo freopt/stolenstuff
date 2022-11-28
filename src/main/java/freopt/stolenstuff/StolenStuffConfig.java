@@ -31,7 +31,7 @@ public class StolenStuffConfig {
 
         @Config.Comment("Maximum number of mobs within range at which point to stop spawning")
         @Config.Name("Maximum mobs")
-        public int maximumMobs = 10;
+        public int maximumMobs = 20;
 
         @Config.Comment("Minimum light level for spawning mobs (set to -1 to disable)")
         @Config.Name("Minimum light")
@@ -45,7 +45,7 @@ public class StolenStuffConfig {
         @Config.Comment("Set the chance per tick of spawning mobs (higher value = rarer, this value is ignored if Spawn on tick is enabled)")
         @Config.Name("Spawn chance")
         @Config.RangeInt(min = 1)
-        public int spawnChance = 3200;
+        public int spawnChance = 1030;
 
         @Config.Comment("Set to true to enable configuration to happen on a regular basis with potential randomisation")
         @Config.Name("Spawn on tick")
@@ -53,7 +53,7 @@ public class StolenStuffConfig {
 
         @Config.Comment("How often spawns should happen in ticks (multiply by 20 to convert to seconds)")
         @Config.Name("Spawn every tick")
-        public int spawnTickRate = 680; // 34 seconds
+        public int spawnTickRate = 220; // 34 seconds
 
         @Config.Comment("Set to true to enable variance by a random number of the tick rate")
         @Config.Name("Enable tick variance")

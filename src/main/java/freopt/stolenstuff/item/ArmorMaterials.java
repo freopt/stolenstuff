@@ -12,11 +12,9 @@ public class ArmorMaterials {
 
     public static void registerMaterials() {
         OSMIUM = EnumHelper.addArmorMaterial("osmium","stolenstuff:osmium",35,new int[]{3,5,8,2},1, SoundEvents.ITEM_ARMOR_EQUIP_IRON,2.5F);
-        if (OreDictionary.doesOreNameExist("ingotOsmium")) {
-           OSMIUM.setRepairItem(OreDictionary.getOres("ingotOsmium").get(0));
-        }
-        else {
-            StolenStuff.LOGGER.warn("Could not find instance of ingotOsmium");
-        }
+    }
+
+    public static void setRepairItem() {
+        OSMIUM.setRepairItem(OreDictionary.getOres("ingotOsmium").get(0));
     }
 }
